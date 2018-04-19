@@ -17,6 +17,7 @@
     <script src="angular-route.min.js"></script>
     <script src="angular-animate.min.js"></script>
     <script src="app.js"></script>
+    <script src="angular.config.js"></script>
 
     <script src="vehicles-list/vehicles-list.module.js"></script>
     <script src="vehicles-list/vehicles-list.component.js"></script>
@@ -31,7 +32,7 @@
       <div class="row">
         <div class="col-md-12">
 
-          <vehicles-list></vehicles-list>
+          <ng-view></ng-view>
 
         </div>
       </div>
