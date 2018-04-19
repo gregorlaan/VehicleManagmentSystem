@@ -7,6 +7,7 @@ angular.module('vehicleManagment').
 
         self.vehicleId = $routeParams.vehicleId;
         $scope.vehicle = null;
+        $scope.displayAlert = false;
 
         var getVehicles = JSON.parse(localStorage.getItem('vehicles'));
         $scope.vehicle = getVehicles[self.vehicleId];
@@ -18,6 +19,7 @@ angular.module('vehicleManagment').
             var currentData = JSON.parse(localStorage.getItem('vehicles'));
             currentData[self.vehicleId] = newData;
             localStorage.setItem('vehicles', JSON.stringify(currentData));
+            $scope.displayAlert = true;
           } else {
             console.log('Form is not valid.');
           }
