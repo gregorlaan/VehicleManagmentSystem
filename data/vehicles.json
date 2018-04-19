@@ -1,0 +1,112 @@
+[
+  {
+    "id": 0,
+    "manufacturer": "Toyota",
+    "model": "Land Cruiser Prado",
+    "owner": "Jane Doe",
+    "description": "Nice and big shining car with many stickers on it.",
+    "horsepower": "200",
+    "number_of_doors": "5",
+    "number_of_seats": "5",
+    "transmission": "Automatic",
+    "fuel": "Diesel",
+    "images": {
+      "0": "first_dummy_pic.png",
+      "1": "second_dummy_pic.png",
+      "2": "third_dummy_pic.png"
+    },
+    "videos": {
+      "0": "first_dummy_video.png",
+      "1": "second_dummy_video.png",
+      "2": "third_dummy_video.png"
+    }
+  },
+  {
+    "id": 1,
+    "manufacturer": "BMW",    
+    "model": "M3",
+    "owner": "Mary Ann",
+    "description": "Atractive small pink car with silver plated rims.",
+    "horsepower": "150",
+    "number_of_doors": "5",
+    "number_of_seats": "5",
+    "transmission": "Automatic",
+    "fuel": "Petrol",
+    "images": {
+      "0": "first_dummy_pic.png",
+      "1": "second_dummy_pic.png",
+      "2": "third_dummy_pic.png"
+    },
+    "videos": {
+      "0": "first_dummy_video.png",
+      "1": "second_dummy_video.png",
+      "2": "third_dummy_video.png"
+    }
+  },
+  {
+    "id": 2,
+    "manufacturer": "Audi",    
+    "model": "Q5",
+    "owner": "John Doe",
+    "description": "Big black car with darkened windows.",
+    "horsepower": "160",
+    "number_of_doors": "5",
+    "number_of_seats": "5",
+    "transmission": "Manual",
+    "fuel": "Diesel",
+    "images": {
+      "0": "first_dummy_pic.png",
+      "1": "second_dummy_pic.png",
+      "2": "third_dummy_pic.png"
+    },
+    "videos": {
+      "0": "first_dummy_video.png",
+      "1": "second_dummy_video.png",
+      "2": "third_dummy_video.png"
+    }
+  },
+  {
+    "id": 3,
+    "manufacturer": "Lamborghini",    
+    "model": "Urus",
+    "owner": "Jack Benton",
+    "description": "Gorgeous yellow car with nice rims.",
+    "horsepower": "200",
+    "number_of_doors": "2",
+    "number_of_seats": "2",
+    "transmission": "Manual",
+    "fuel": "Petrol",
+    "images": {
+      "0": "first_dummy_pic.png",
+      "1": "second_dummy_pic.png",
+      "2": "third_dummy_pic.png"
+    },
+    "videos": {
+      "0": "first_dummy_video.png",
+      "1": "second_dummy_video.png",
+      "2": "third_dummy_video.png"
+    }
+  },
+  {
+    "id": 4,
+    "manufacturer": "Volco",
+    "model": "XC60",
+    "owner": "Jason statham",
+    "description": "The strongest car available for transporting humans.",
+    "horsepower": "210",
+    "number_of_doors": "5",
+    "number_of_seats": "5",
+    "transmission": "Manual",
+    "fuel": "Diesel",
+    "images": {
+      "0": "first_dummy_pic.png",
+      "1": "second_dummy_pic.png",
+      "2": "third_dummy_pic.png"
+    },
+    "videos": {
+      "0": "first_dummy_video.png",
+      "1": "second_dummy_video.png",
+      "2": "third_dummy_video.png"
+    }
+  }
+]
