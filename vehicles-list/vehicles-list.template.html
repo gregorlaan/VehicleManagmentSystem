@@ -22,22 +22,26 @@
   </tbody>
 </table>
 
-<ul class="list-group">
+<ul class="list-group" ng-if="selectedCar">
+  <h2>{{selectedCar.owner + "'s"}} car</h2>
   <li class="list-group-item">
     <p>
-      <b>Horsepower</b>
+      {{selectedCar.description}}
     </p>
     <p>
-      <b>Number of doors</b>
+      <b>Horsepower:</b> {{selectedCar.horsepower}}
     </p>
     <p>
-      <b>Number of seats</b>
+      <b>Number of doors:</b> {{selectedCar.number_of_doors}}
     </p>
     <p>
-      <b>Transmission</b>
+      <b>Number of seats:</b> {{selectedCar.number_of_seats}}
     </p>
     <p>
-      <b>Fuel</b>
+      <b>Transmission:</b> {{selectedCar.transmission}}
+    </p>
+    <p>
+      <b>Fuel:</b> {{selectedCar.fuel}}
     </p>
   </li>
 </ul>
