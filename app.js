@@ -1,3 +1,4 @@
 var MDK = angular.module('VMS', [
-  'vehiclesList'
+  'vehiclesList',
+  'vehicleManagment'
 ]);
