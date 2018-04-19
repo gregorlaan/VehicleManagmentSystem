@@ -1,0 +1,1 @@
+var MDK = angular.module('VMS', []);
