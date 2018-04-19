@@ -10,6 +10,7 @@
         <th>Model</th>
         <th>Owner</th>
         <th>Details</th>
+        <th></th>
       </tr>
     </thead>
     <tr ng-repeat="car in $ctrl.vehicles">
@@ -18,6 +19,7 @@
       <td>{{car.model}}</td>
       <td>{{car.owner}}</td>
       <td><button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button></td>
+      <td><a ng-href="#!/managment/{{car.id}}" class="btn btn-primary">Edit</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,1 +1,59 @@
 <h1>Vehicle Managment</h1>
+
+<ul class="list-group">
+  <li class="list-group-item">
+
+    <form name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
+      <p>
+        <b>Description</b>
+      </p>
+      <p>
+        <textarea required ng-model="vehicle.description"></textarea>
+      </p>
+      <p>
+        <b>Manufacturer</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.manufacturer" type="text">
+      </p>
+      <p>
+        <b>Model</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.model" type="text">
+      </p>
+      <p>
+        <b>Horsepower</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.horsepower" type="text">
+      </p>
+      <p>
+        <b>Number of doors</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.number_of_doors" type="text">
+      </p>
+      <p>
+        <b>Number of seats</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.number_of_seats" type="text">
+      </p>
+      <p>
+        <b>Transmission</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.transmission" type="text">
+      </p>
+      <p>
+        <b>Fuel</b>
+      </p>
+      <p>
+        <input required ng-model="vehicle.fuel" type="text">
+      </p>
+      <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
+    </form>
+
+  </li>
+</ul>

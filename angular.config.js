@@ -7,7 +7,7 @@ angular.module('VMS').
     when('/', {
       template: '<vehicles-list></vehicles-list>'
     }).
-    when('/managment', {
+    when('/managment/:vehicleId', {
       template: '<vehicle-managment></vehicle-managment>'
     }).otherwise('/')
   }
