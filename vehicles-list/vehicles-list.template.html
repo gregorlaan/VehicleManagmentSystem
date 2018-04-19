@@ -9,6 +9,7 @@
         <th>Manufacturer</th>
         <th>Model</th>
         <th>Owner</th>
+        <th>Details</th>
       </tr>
     </thead>
     <tr ng-repeat="car in $ctrl.vehicles">
@@ -16,6 +17,27 @@
       <td>{{car.manufacturer}}</td>
       <td>{{car.model}}</td>
       <td>{{car.owner}}</td>
+      <td><button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button></td>
     </tr>
   </tbody>
 </table>
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <p>
+      <b>Horsepower</b>
+    </p>
+    <p>
+      <b>Number of doors</b>
+    </p>
+    <p>
+      <b>Number of seats</b>
+    </p>
+    <p>
+      <b>Transmission</b>
+    </p>
+    <p>
+      <b>Fuel</b>
+    </p>
+  </li>
+</ul>
