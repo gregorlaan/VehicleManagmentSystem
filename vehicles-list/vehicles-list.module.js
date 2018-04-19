@@ -1,1 +1,3 @@
-angular.module('vehiclesList', []);
+angular.module('vehiclesList', [
+  'ngAnimate'
+]);
