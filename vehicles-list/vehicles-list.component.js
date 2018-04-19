@@ -15,9 +15,16 @@ angular.module('vehiclesList').
           $scope.selectedCar = car;
         }
 
-        $http.get('data/vehicles.json').then(function(response) {
-          self.vehicles = response.data;
-        });
+        if (localStorage.getItem('vehicles')) {
+          console.log('found a match in localStorage!');
+          self.vehicles = JSON.parse(localStorage.getItem('vehicles'));
+        } else {
+          console.log('localStorage is empty!');
+          $http.get('data/vehicles.json').then(function(response) {
+            localStorage.setItem('vehicles', JSON.stringify(response.data));
+            self.vehicles = response.data;
+          });
+        }
       }
     ]
   });
