@@ -1,5 +1,21 @@
 <h1>Our Vehicles</h1>
 
-<ul ng-repeat="car in $ctrl.vehicles">
-  <li>{{car.model}}</li>
-</ul>
+<table class="table table-bordered">
+  <thead></thead>
+  <tbody>
+    <thead class="thead-dark">
+      <tr>
+        <th></th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Owner</th>
+      </tr>
+    </thead>
+    <tr ng-repeat="car in $ctrl.vehicles">
+      <td>{{car.id}}</td>
+      <td>{{car.manufacturer}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.owner}}</td>
+    </tr>
+  </tbody>
+</table>
