@@ -1,0 +1,17 @@
+/* Slide Animation */
+.slide-animation.ng-enter,
+.slide-animation.ng-leave {
+  transition: ease-in-out 500ms;
+}
+
+.slide-animation.ng-enter.ng-enter,
+.slide-animation.ng-enter.ng-leave.ng-leave-active {
+  opacity:0;
+  transform: translateX(300px);
+}
+
+.slide-animation.ng-leave,
+.slide-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: translateX(0);  
+}
