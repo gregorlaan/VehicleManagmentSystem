@@ -5,7 +5,7 @@
 }
 
 .slide-animation.ng-enter.ng-enter,
-.slide-animation.ng-enter.ng-leave.ng-leave-active {
+.slide-animation.ng-leave.ng-leave-active {
   opacity:0;
   transform: translateX(300px);
 }
