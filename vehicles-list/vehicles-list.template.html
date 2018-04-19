@@ -22,8 +22,15 @@
   </tbody>
 </table>
 
-<ul ng-if="selectedCar" class="list-group slide-animation">
-  <h2>{{selectedCar.owner + "'s"}} car</h2>
+<ul ng-if="selectedCar !== null" class="list-group slide-animation">
+  <div class="row">
+    <div class="col-md-10">
+      <h2>{{selectedCar.owner + "'s"}} car</h2>
+    </div>
+    <div class="col-md-2">
+        <button type="button" ng-click="closeList()" class="btn btn-block btn-danger close-list">Close</button>
+      </div>
+  </div>
   <li class="list-group-item">
     <p>
       {{selectedCar.description}}

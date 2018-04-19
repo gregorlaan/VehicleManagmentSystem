@@ -6,6 +6,10 @@ angular.module('vehiclesList').
         var self = this;
         $scope.selectedCar = null;
 
+        $scope.closeList = function() {
+          $scope.selectedCar = null;
+        }
+
         $scope.selectCar = function(car) {
           console.log(car);
           $scope.selectedCar = car;
