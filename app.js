@@ -1,4 +1,4 @@
-var MDK = angular.module('VMS', [
+angular.module('VMS', [
   'ngRoute',
   'vehiclesList',
   'vehicleManagment'
