@@ -5,56 +5,63 @@
 <br>
 
 <table class="table table-bordered">
-  <thead></thead>
+  <thead class="thead-dark">
+    <tr>
+      <th></th>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Owner</th>
+      <th>Details</th>
+      <th></th>
+    </tr>
+  </thead>
   <tbody>
-    <thead class="thead-dark">
-      <tr>
-        <th></th>
-        <th>Manufacturer</th>
-        <th>Model</th>
-        <th>Owner</th>
-        <th>Details</th>
-        <th></th>
-      </tr>
-    </thead>
     <tr ng-repeat="car in $ctrl.vehicles | filter: searchOption">
       <td>{{car.id}}</td>
       <td>{{car.manufacturer}}</td>
       <td>{{car.model}}</td>
       <td>{{car.owner}}</td>
-      <td><button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button></td>
-      <td><a ng-href="#!/managment/{{car.id}}" class="btn btn-primary">Edit</a></td>
+      <td>
+        <button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button>
+      </td>
+      <td>
+        <a ng-href="#!/managment/{{car.id}}" class="btn btn-primary">Edit</a>
+      </td>
     </tr>
   </tbody>
 </table>
 
-<ul ng-if="selectedCar !== null" class="list-group slide-animation">
-  <div class="row">
-    <div class="col-md-10">
-      <h2>{{selectedCar.owner + "'s"}} car</h2>
-    </div>
-    <div class="col-md-2">
-        <button type="button" ng-click="closeList()" class="btn btn-block btn-danger close-list">Close</button>
-      </div>
+<div class="row slide-animation" ng-if="selectedCar !== null">
+
+  <div class="col-md-10">
+    <h2>{{selectedCar.owner + "'s"}} car</h2>
   </div>
-  <li class="list-group-item">
-    <p>
-      {{selectedCar.description}}
-    </p>
-    <p>
-      <b>Horsepower:</b> {{selectedCar.horsepower}}
-    </p>
-    <p>
-      <b>Number of doors:</b> {{selectedCar.number_of_doors}}
-    </p>
-    <p>
-      <b>Number of seats:</b> {{selectedCar.number_of_seats}}
-    </p>
-    <p>
-      <b>Transmission:</b> {{selectedCar.transmission}}
-    </p>
-    <p>
-      <b>Fuel:</b> {{selectedCar.fuel}}
-    </p>
-  </li>
-</ul>
+
+  <div class="col-md-2">
+    <button type="button" ng-click="closeList()" class="btn btn-block btn-danger close-list">Close</button>
+  </div>
+
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item">
+        {{selectedCar.description}}
+      </li>
+      <li class="list-group-item">
+        <b>Horsepower:</b> {{selectedCar.horsepower}}
+      </li>
+      <li class="list-group-item">
+        <b>Number of doors:</b> {{selectedCar.number_of_doors}}
+      </li>
+      <li class="list-group-item">
+        <b>Number of seats:</b> {{selectedCar.number_of_seats}}
+      </li>
+      <li class="list-group-item">
+        <b>Transmission:</b> {{selectedCar.transmission}}
+      </li>
+      <li class="list-group-item">
+        <b>Fuel:</b> {{selectedCar.fuel}}
+      </li>
+    </ul>
+  </div>
+
+</div>
