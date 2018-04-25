@@ -1,18 +1,22 @@
 angular.module('vehiclesList').
   component('vehiclesList', {
     templateUrl: 'vehicles-list/vehicles-list.template.html',
-    controller: [ '$http', '$scope',
-      function vehiclesListController($http, $scope) {
+    controller: [ '$rootScope', '$http', '$scope',
+      function vehiclesListController($rootScope, $http, $scope) {
         var self = this;
         $scope.selectedCar = null;
+        $scope.showDetailsModal = false;
 
         $scope.closeList = function() {
           $scope.selectedCar = null;
+          $rootScope.modalActive = false;
+          $scope.showDetailsModal = false;
         }
 
         $scope.selectCar = function(car) {
-          console.log(car);
           $scope.selectedCar = car;
+          $scope.showDetailsModal = true;
+          $rootScope.modalActive = true;
         }
 
         if (localStorage.getItem('vehicles')) {

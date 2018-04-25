@@ -31,37 +31,41 @@
   </tbody>
 </table>
 
-<div class="row slide-animation" ng-if="selectedCar !== null">
-
-  <div class="col-md-10">
-    <h2>{{selectedCar.owner + "'s"}} car</h2>
+<!-- Details Modal -->
+<div ng-class="{'display-block show': showDetailsModal}" class="modal fade" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{selectedCar.owner + "'s"}} car</h5>
+        <button ng-click="closeList()" type="button" class="close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+            {{selectedCar.description}}
+          </li>
+          <li class="list-group-item">
+            <b>Horsepower:</b> {{selectedCar.horsepower}}
+          </li>
+          <li class="list-group-item">
+            <b>Number of doors:</b> {{selectedCar.number_of_doors}}
+          </li>
+          <li class="list-group-item">
+            <b>Number of seats:</b> {{selectedCar.number_of_seats}}
+          </li>
+          <li class="list-group-item">
+            <b>Transmission:</b> {{selectedCar.transmission}}
+          </li>
+          <li class="list-group-item">
+            <b>Fuel:</b> {{selectedCar.fuel}}
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button ng-click="closeList()" type="button" class="btn btn-primary">Close</button>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-2">
-    <button type="button" ng-click="closeList()" class="btn btn-block btn-danger close-list">Close</button>
-  </div>
-
-  <div class="col-md-12">
-    <ul class="list-group">
-      <li class="list-group-item">
-        {{selectedCar.description}}
-      </li>
-      <li class="list-group-item">
-        <b>Horsepower:</b> {{selectedCar.horsepower}}
-      </li>
-      <li class="list-group-item">
-        <b>Number of doors:</b> {{selectedCar.number_of_doors}}
-      </li>
-      <li class="list-group-item">
-        <b>Number of seats:</b> {{selectedCar.number_of_seats}}
-      </li>
-      <li class="list-group-item">
-        <b>Transmission:</b> {{selectedCar.transmission}}
-      </li>
-      <li class="list-group-item">
-        <b>Fuel:</b> {{selectedCar.fuel}}
-      </li>
-    </ul>
-  </div>
-
 </div>
