@@ -1,2 +1,2 @@
-# VehicleManagmentSystem
-Simple SPA based vehicle managment system
+# VehicleManagementSystem
+Simple SPA based vehicle management system
