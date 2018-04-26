@@ -1,6 +1,6 @@
-angular.module('vehicleManagment').
-  component('vehicleManagment', {
-    templateUrl: 'vehicle-managment/vehicle-managment.template.html',
+angular.module('vehicleManagement').
+  component('vehicleManagement', {
+    templateUrl: 'vehicle-management/vehicle-management.template.html',
     controller: ['$scope', '$routeParams', '$http',
       function vehicleManagmentController($scope, $routeParams, $http) {
         var self = this;
