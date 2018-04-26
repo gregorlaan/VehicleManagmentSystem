@@ -28,3 +28,9 @@ input,
 textarea {
   width: 100%;
 }
+
+/* Vehicle Management */
+form#vehicle-management {
+  padding: .75rem 1.25rem;
+  border: 1px solid rgba(0,0,0,.125);
+}

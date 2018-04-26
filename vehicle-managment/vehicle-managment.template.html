@@ -4,61 +4,50 @@
   Data successfully changed!
 </div>
 
-<ul class="list-group">
-  <li class="list-group-item">
+<form id="vehicle-management" name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
 
-    <form name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
-      <p>
-        <b>Description</b>
-      </p>
-      <p>
-        <textarea required ng-model="vehicle.description"></textarea>
-      </p>
-      <p>
-        <b>Manufacturer</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.manufacturer" type="text">
-      </p>
-      <p>
-        <b>Model</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.model" type="text">
-      </p>
-      <p>
-        <b>Horsepower</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.horsepower" type="text">
-      </p>
-      <p>
-        <b>Number of doors</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.number_of_doors" type="text">
-      </p>
-      <p>
-        <b>Number of seats</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.number_of_seats" type="text">
-      </p>
-      <p>
-        <b>Transmission</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.transmission" type="text">
-      </p>
-      <p>
-        <b>Fuel</b>
-      </p>
-      <p>
-        <input required ng-model="vehicle.fuel" type="text">
-      </p>
-      <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
-      <td><a ng-href="#!/" class="btn btn-success btn-block">Go Back</a></td>
-    </form>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea id="description" class="form-control" required ng-model="vehicle.description"></textarea>
+  </div>
 
-  </li>
-</ul>
+  <div class="form-group">
+    <label for="manufacturer">Manufacturer</label>
+    <input type="text" id="manufacturer" class="form-control" required ng-model="vehicle.manufacturer">
+  </div>
+
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" class="form-control" required ng-model="vehicle.model">
+  </div>
+
+  <div class="form-group">
+    <label for="horsepower">Horsepower</label>
+    <input type="text" id="horsepower" class="form-control" required ng-model="vehicle.horsepower">
+  </div>
+
+  <div class="form-group">
+    <label for="number_of_doors">Number of doors</label>
+    <input type="text" id="number_of_doors" class="form-control" required ng-model="vehicle.number_of_doors">
+  </div>
+
+  <div class="form-group">
+    <label for="number_of_seats">Number of seats</label>
+    <input type="text" id="number_of_seats" class="form-control" required ng-model="vehicle.number_of_seats">
+  </div>
+
+  <div class="form-group">
+    <label for="transmission">Transmission</label>
+    <input type="text" id="transmission" class="form-control" required ng-model="vehicle.transmission">
+  </div>
+
+  <div class="form-group">
+    <label for="fuel">Fuel</label>
+    <input type="text" id="fuel" class="form-control" required ng-model="vehicle.fuel">
+  </div>
+
+  <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
+
+  <a ng-href="#!/" class="btn btn-success btn-block">Go Back</a>
+
+</form>
