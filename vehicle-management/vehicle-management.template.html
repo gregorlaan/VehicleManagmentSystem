@@ -1,7 +1,10 @@
 <h1>Vehicle Management</h1>
 
-<div ng-if="displayAlert.statement === true" class="float-alert alert {{displayAlert.type}}" role="alert">
+<div ng-if="displayAlert.statement === true" class="alert-dismissible float-alert alert {{displayAlert.type}}" role="alert">
   {{displayAlert.name}}
+  <button ng-click="displayAlert.statement = !displayAlert.statement" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
 
 <form id="vehicle-management" name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
