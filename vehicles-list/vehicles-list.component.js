@@ -6,6 +6,7 @@ angular.module('vehiclesList').
         var self = this;
         $scope.selectedCar = null;
         $scope.showDetailsModal = false;
+        $scope.orderOption = 'id';
 
         $scope.closeList = function() {
           $scope.selectedCar = null;
