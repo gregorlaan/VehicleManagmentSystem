@@ -1,24 +1,22 @@
-/* Slide Animation */
-.slide-animation.ng-enter,
-.slide-animation.ng-leave {
+/* Modal Window */
+.modal {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal .modal-dialog {
   transition: ease-in-out 500ms;
+  margin-top: 100px;
 }
 
-.slide-animation.ng-enter.ng-enter,
-.slide-animation.ng-leave.ng-leave-active {
-  opacity:0;
-  transform: translateX(300px);
+/* The start of enter animation */
+.modal.ng-enter .modal-dialog {
+  opacity: 0;
+  transform: translateY(-300px);
 }
 
-.slide-animation.ng-leave,
-.slide-animation.ng-enter.ng-enter-active {
-  opacity: 1;
-  transform: translateX(0);  
-}
-
-input,
-textarea {
-  width: 100%;
+/* The end of leave animation */
+.modal.ng-leave.ng-leave-active .modal-dialog {
+  transform: translateY(-300px);
 }
 
 /* Main Style */
@@ -26,6 +24,7 @@ textarea {
   display: block;
 }
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.85);
+input,
+textarea {
+  width: 100%;
 }
