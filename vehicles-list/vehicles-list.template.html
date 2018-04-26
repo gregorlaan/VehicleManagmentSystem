@@ -12,7 +12,6 @@
       <th>Model</th>
       <th>Owner</th>
       <th>Details</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -23,9 +22,6 @@
       <td>{{car.owner}}</td>
       <td>
         <button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button>
-      </td>
-      <td>
-        <a ng-href="#!/management/{{car.id}}" class="btn btn-primary">Edit</a>
       </td>
     </tr>
   </tbody>
@@ -64,6 +60,7 @@
         </ul>
       </div>
       <div class="modal-footer">
+        <a ng-href="#!/management/{{selectedCar.id}}" class="btn btn-secondary">Edit</a>
         <button ng-click="closeList()" type="button" class="btn btn-primary">Close</button>
       </div>
     </div>
