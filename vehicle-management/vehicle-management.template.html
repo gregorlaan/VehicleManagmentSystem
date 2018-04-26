@@ -1,7 +1,7 @@
 <h1>Vehicle Management</h1>
 
-<div ng-if="displayAlert === true" class="alert alert-primary" role="alert">
-  Data successfully changed!
+<div ng-if="displayAlert.statement === true" class="alert {{displayAlert.type}}" role="alert">
+  {{displayAlert.name}}
 </div>
 
 <form id="vehicle-management" name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
