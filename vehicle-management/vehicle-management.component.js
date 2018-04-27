@@ -1,8 +1,8 @@
 angular.module('vehicleManagement').
   component('vehicleManagement', {
     templateUrl: 'vehicle-management/vehicle-management.template.html',
-    controller: ['$scope', '$routeParams', '$http',
-      function vehicleManagmentController($scope, $routeParams, $http) {
+    controller: ['$scope', '$routeParams', '$http', 'ModalData',
+      function vehicleManagmentController($scope, $routeParams, $http, ModalData) {
         var self = this;
 
         self.vehicleId = $routeParams.vehicleId;
@@ -10,6 +10,7 @@ angular.module('vehicleManagement').
         $scope.displayAlert = {};
         $scope.displayAlert.statement = false;
         $scope.displayAlert.name = '';
+        $scope.ModalData = ModalData;
 
         var getVehicles = JSON.parse(localStorage.getItem('vehicles'));
         $scope.vehicle = getVehicles[self.vehicleId];

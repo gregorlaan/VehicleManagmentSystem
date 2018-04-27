@@ -3,3 +3,8 @@ angular.module('VMS', [
   'vehiclesList',
   'vehicleManagement'
 ]);
+
+angular.module('VMS').
+  factory('ModalData', function () {
+    return { Id: '' };
+  });

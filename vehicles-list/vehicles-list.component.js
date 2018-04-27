@@ -1,12 +1,13 @@
 angular.module('vehiclesList').
   component('vehiclesList', {
     templateUrl: 'vehicles-list/vehicles-list.template.html',
-    controller: [ '$rootScope', '$http', '$scope',
-      function vehiclesListController($rootScope, $http, $scope) {
+    controller: [ '$rootScope', '$http', '$scope', 'ModalData',
+      function vehiclesListController($rootScope, $http, $scope, ModalData) {
         var self = this;
         $scope.selectedCar = null;
         $scope.showDetailsModal = false;
         $scope.orderOption = 'id';
+        $scope.ModalData = ModalData;
 
         $scope.closeDetailsModal = function() {
           $scope.selectedCar = null;
