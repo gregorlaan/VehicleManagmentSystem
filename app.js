@@ -6,5 +6,5 @@ angular.module('VMS', [
 
 angular.module('VMS').
   factory('ModalData', function () {
-    return { Id: '' };
+    return {};
   });

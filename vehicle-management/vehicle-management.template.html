@@ -1,56 +1,68 @@
-<h1>Vehicle Management</h1>
+<div ng-if="ModalData.showManagementModal" class="display-block show modal fade">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Vehicle Management</h5>
+        <button ng-click="closeManagementModal()" type="button" class="close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div ng-if="displayAlert.statement === true" class="alert-dismissible float-alert alert {{displayAlert.type}}" role="alert">
+          {{displayAlert.name}}
+          <button ng-click="displayAlert.statement = !displayAlert.statement" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
 
-<div ng-if="displayAlert.statement === true" class="alert-dismissible float-alert alert {{displayAlert.type}}" role="alert">
-  {{displayAlert.name}}
-  <button ng-click="displayAlert.statement = !displayAlert.statement" type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+        <form id="vehicle-management" name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" class="form-control" required ng-model="vehicle.description"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="manufacturer">Manufacturer</label>
+            <input type="text" id="manufacturer" class="form-control" required ng-model="vehicle.manufacturer">
+          </div>
+
+          <div class="form-group">
+            <label for="model">Model</label>
+            <input type="text" id="model" class="form-control" required ng-model="vehicle.model">
+          </div>
+
+          <div class="form-group">
+            <label for="horsepower">Horsepower</label>
+            <input type="text" id="horsepower" class="form-control" required ng-model="vehicle.horsepower">
+          </div>
+
+          <div class="form-group">
+            <label for="number_of_doors">Number of doors</label>
+            <input type="text" id="number_of_doors" class="form-control" required ng-model="vehicle.number_of_doors">
+          </div>
+
+          <div class="form-group">
+            <label for="number_of_seats">Number of seats</label>
+            <input type="text" id="number_of_seats" class="form-control" required ng-model="vehicle.number_of_seats">
+          </div>
+
+          <div class="form-group">
+            <label for="transmission">Transmission</label>
+            <input type="text" id="transmission" class="form-control" required ng-model="vehicle.transmission">
+          </div>
+
+          <div class="form-group">
+            <label for="fuel">Fuel</label>
+            <input type="text" id="fuel" class="form-control" required ng-model="vehicle.fuel">
+          </div>
+
+          <button type="submit" class="btn btn-block btn-success">Save Changes</button>
+
+          <button ng-click="closeManagementModal()" type="button" class="btn btn-block btn-danger">Close</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
-
-<form id="vehicle-management" name="formValidation" ng-submit="saveChanges(vehicle, formValidation)">
-
-  <div class="form-group">
-    <label for="description">Description</label>
-    <textarea id="description" class="form-control" required ng-model="vehicle.description"></textarea>
-  </div>
-
-  <div class="form-group">
-    <label for="manufacturer">Manufacturer</label>
-    <input type="text" id="manufacturer" class="form-control" required ng-model="vehicle.manufacturer">
-  </div>
-
-  <div class="form-group">
-    <label for="model">Model</label>
-    <input type="text" id="model" class="form-control" required ng-model="vehicle.model">
-  </div>
-
-  <div class="form-group">
-    <label for="horsepower">Horsepower</label>
-    <input type="text" id="horsepower" class="form-control" required ng-model="vehicle.horsepower">
-  </div>
-
-  <div class="form-group">
-    <label for="number_of_doors">Number of doors</label>
-    <input type="text" id="number_of_doors" class="form-control" required ng-model="vehicle.number_of_doors">
-  </div>
-
-  <div class="form-group">
-    <label for="number_of_seats">Number of seats</label>
-    <input type="text" id="number_of_seats" class="form-control" required ng-model="vehicle.number_of_seats">
-  </div>
-
-  <div class="form-group">
-    <label for="transmission">Transmission</label>
-    <input type="text" id="transmission" class="form-control" required ng-model="vehicle.transmission">
-  </div>
-
-  <div class="form-group">
-    <label for="fuel">Fuel</label>
-    <input type="text" id="fuel" class="form-control" required ng-model="vehicle.fuel">
-  </div>
-
-  <button type="submit" class="btn btn-block btn-primary">Save Changes</button>
-
-  <a ng-href="#!/" class="btn btn-success btn-block">Go Back</a>
-
-</form>

@@ -50,7 +50,7 @@
         <ul class="list-group">
           <li class="list-group-item">
             <b>{{selectedCar.manufacturer}} {{selectedCar.model}}</b>
-            <br>
+            <br> 
             {{selectedCar.description}}
           </li>
           <li class="list-group-item">
@@ -71,9 +71,12 @@
         </ul>
       </div>
       <div class="modal-footer">
-        <a ng-href="#!/management/{{selectedCar.id}}" class="btn btn-secondary">Edit</a>
+        <button ng-click="ModalData.openManagementModal(selectedCar.id)" type="button" class="btn btn-secondary">Edit</button>
         <button ng-click="closeDetailsModal()" type="button" class="btn btn-primary">Close</button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Vehicle Management Modal -->
+<vehicle-management></vehicle-management>
