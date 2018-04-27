@@ -30,7 +30,7 @@
       <td>{{car.model}}</td>
       <td>{{car.owner}}</td>
       <td>
-        <button type="button" ng-click="selectCar(car)" class="btn btn-primary">Show Details</button>
+        <button type="button" ng-click="openDetailsModal(car)" class="btn btn-primary">Show Details</button>
       </td>
     </tr>
   </tbody>
@@ -42,7 +42,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">{{selectedCar.owner + "'s"}} car</h5>
-        <button ng-click="closeList()" type="button" class="close">
+        <button ng-click="closeDetailsModal()" type="button" class="close">
           <span>&times;</span>
         </button>
       </div>
@@ -72,7 +72,7 @@
       </div>
       <div class="modal-footer">
         <a ng-href="#!/management/{{selectedCar.id}}" class="btn btn-secondary">Edit</a>
-        <button ng-click="closeList()" type="button" class="btn btn-primary">Close</button>
+        <button ng-click="closeDetailsModal()" type="button" class="btn btn-primary">Close</button>
       </div>
     </div>
   </div>

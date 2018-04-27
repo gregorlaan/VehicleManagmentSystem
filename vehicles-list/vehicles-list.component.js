@@ -8,13 +8,13 @@ angular.module('vehiclesList').
         $scope.showDetailsModal = false;
         $scope.orderOption = 'id';
 
-        $scope.closeList = function() {
+        $scope.closeDetailsModal = function() {
           $scope.selectedCar = null;
           $rootScope.modalActive = false;
           $scope.showDetailsModal = false;
         }
 
-        $scope.selectCar = function(car) {
+        $scope.openDetailsModal = function(car) {
           $scope.selectedCar = car;
           $scope.showDetailsModal = true;
           $rootScope.modalActive = true;
