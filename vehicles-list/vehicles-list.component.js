@@ -9,18 +9,6 @@ angular.module('vehiclesList').
         $scope.orderOption = 'id';
         $scope.ModalData = ModalData;
 
-        $scope.closeDetailsModal = function() {
-          $scope.selectedCar = null;
-          $rootScope.modalActive = false;
-          $scope.showDetailsModal = false;
-        }
-
-        $scope.openDetailsModal = function(car) {
-          $scope.selectedCar = car;
-          $scope.showDetailsModal = true;
-          $rootScope.modalActive = true;
-        }
-
         if (localStorage.getItem('vehicles')) {
           console.log('found a match in localStorage!');
           self.vehicles = JSON.parse(localStorage.getItem('vehicles'));

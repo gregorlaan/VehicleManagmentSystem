@@ -1,6 +1,7 @@
 angular.module('VMS', [
   'ngRoute',
   'vehiclesList',
+  'vehicleDetails',
   'vehicleManagement'
 ]);
 
