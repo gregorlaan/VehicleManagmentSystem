@@ -4,11 +4,11 @@ Simple SPA based vehicle management system
 [Live Preview](https://gregorlaan.github.io/VehicleManagmentSystem/)
 
 ## App Strucutre
-┏ data
+┏ **data**
 
 ┣┅ vehicles.json
 
-┣ vehicle-details
+┣ **vehicle-details**
 
 ┣┅ vehicle-details.component.js
 
@@ -16,7 +16,7 @@ Simple SPA based vehicle management system
 
 ┣┅ vehicle-details.template.html
 
-┣ vehicle-management
+┣ **vehicle-management**
 
 ┣┅ vehicle-management.component.js
 
@@ -24,7 +24,7 @@ Simple SPA based vehicle management system
 
 ┣┅ vehicle-management.template.html
 
-┣ vehicles-list
+┣ **vehicles-list**
 
 ┣┅ vehicles-list.component.js
 
